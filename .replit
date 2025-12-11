@@ -1,4 +1,4 @@
-run = "cd src && python main.py"
+run = "python main.py"
 
 [nix]
 channel = "stable-24_05"
@@ -6,4 +6,4 @@ channel = "stable-24_05"
 modules = ["python-3.11"]
 
 [deployment]
-run = ["sh", "-c", "cd src && python main.py"]
+run = ["sh", "-c", "python main.py"]

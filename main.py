@@ -14,12 +14,10 @@ app = FastAPI()
 
 app.include_router(api_router)
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
 
 @app.get("/")
 def index():
-    return FileResponse("static/index.html")
+    return FileResponse("index.html")
 
 
 if __name__ == "__main__":
